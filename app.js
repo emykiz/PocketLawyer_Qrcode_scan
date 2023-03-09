@@ -1,8 +1,11 @@
 const QRCode = require('qrcode');
 const express = require('express');
 const app = express();
+
+
 const moviesData = require('./movies.json');
 const movies = moviesData.movies;
+
 // Generate a unique link each time the script is run
 const generateLink = async () => {
   const randomMovies = movies.sort(() => Math.random() - 0.5).slice(0, 5);
